@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Feminine, warm, and supportive background (blush-pink to lavender gradient) */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #ffe5ec 0%, #fff0f5 100%);
+  min-height: 100vh;
+  color: #222;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  body {
+    font-size: 1em;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe5ec 100%);
+  }
+}
+
+/* Optional: selection color for branding */
+::selection {
+  background: #fbb1b1; /* soft pink */
+  color: #222;
+}

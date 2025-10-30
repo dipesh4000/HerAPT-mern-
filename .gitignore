@@ -1,0 +1,67 @@
+# ----------------------------
+# 🧠 General Logs
+# ----------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ----------------------------
+# 📦 Dependencies
+# ----------------------------
+node_modules/
+
+# ----------------------------
+# 🧱 Build Outputs
+# ----------------------------
+dist/
+dist-ssr/
+build/
+*.local
+
+# ----------------------------
+# ⚙️ Environment Variables
+# ----------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ----------------------------
+# 💻 Editor Directories & Files
+# ----------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ----------------------------
+# 🚀 Backend Specific Ignores
+# ----------------------------
+Backend/node_modules/
+Backend/.env
+
+# ----------------------------
+# 🧩 Frontend Specific Ignores
+# ----------------------------
+Frontend/node_modules/
+Frontend/dist/
+Frontend/build/
+Frontend/.env
+
+# ----------------------------
+# 🧪 Misc
+# ----------------------------
+*.pid
+coverage/
+tmp/
+temp/
