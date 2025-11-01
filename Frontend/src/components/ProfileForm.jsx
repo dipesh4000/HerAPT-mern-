@@ -103,7 +103,7 @@ const ProfileForm = () => {
               </label>
               <input
                 id="experience"
-                type="text"
+                type="number"
                 name="experience"
                 value={formData.experience}
                 onChange={handleChange}
@@ -125,7 +125,7 @@ const ProfileForm = () => {
               name="currentRole"
               value={formData.currentRole}
               onChange={handleChange}
-              placeholder="e.g., Software Developer, Student"
+              placeholder="e.g., Software Developer, Student, Product Manager"
               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
             />
           </div>
@@ -142,7 +142,7 @@ const ProfileForm = () => {
               value={formData.skills}
               onChange={handleChange}
               required
-              placeholder="e.g., Python JavaScript Communication"
+              placeholder="e.g., Python, JavaScript, Communication"
               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
             />
           </div>
@@ -157,48 +157,48 @@ const ProfileForm = () => {
               value={formData.interests}
               onChange={handleChange}
               required
-              placeholder="e.g., AI Design Leadership"
+              placeholder="e.g., AI, Design, Leadership"
               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
             />
           </div>
 
-          {/* Mentee Fields */}
-          {user.role === "mentee" && (
-            <>
-              <div>
-                <label htmlFor="careerGoals" className="block text-sm font-medium text-gray-700 mb-2">
-                  Career Goals
-                </label>
-                <textarea
-                  id="careerGoals"
-                  name="careerGoals"
-                  value={formData.careerGoals}
-                  onChange={handleChange}
-                  required
-                  rows="4"
-                  placeholder="What are your career aspirations?"
-                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div>
-                <label htmlFor="careerBreakYears" className="block text-sm font-medium text-gray-700 mb-2">
-                  Career Break (years)
-                </label>
-                <input
-                  id="careerBreakYears"
-                  type="number"
-                  name="careerBreakYears"
-                  value={formData.careerBreakYears}
-                  onChange={handleChange}
-                  min="0"
-                  placeholder="0"
-                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
-                />
-              </div>
-            </>
-          )}
+          (Mentee Fields)
+                {user.role === "mentee" && (
+                <>
+                  <div>
+                  <label htmlFor="careerGoals" className="block text-sm font-medium text-gray-700 mb-2">
+                    Career Goals
+                  </label>
+                  <textarea
+                    id="careerGoals"
+                    name="careerGoals"
+                    value={formData.careerGoals}
+                    onChange={handleChange}
+                    required
+                    rows="4"
+                    placeholder="What are your career aspirations?"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
+                  />
+                  </div>
+                  <div>
+                  <label htmlFor="careerBreakYears" className="block text-sm font-medium text-gray-700 mb-2">
+                    Career Break (years)
+                  </label>
+                  <input
+                    id="careerBreakYears"
+                    type="number"
+                    name="careerBreakYears"
+                    value={formData.careerBreakYears || 0} // Default to 0
+                    onChange={handleChange}
+                    min="0"
+                    placeholder="0"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
+                  />
+                  </div>
+                </>
+                )}
 
-          {/* Mentor Fields */}
+                {/* Mentor Fields */}
           {user.role === "mentor" && (
             <>
               <div>
@@ -212,7 +212,7 @@ const ProfileForm = () => {
                   value={formData.expertise}
                   onChange={handleChange}
                   required
-                  placeholder="e.g., Product Management UX Design"
+                  placeholder="e.g., Product Management, UX, Design"
                   className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary"
                 />
               </div>
